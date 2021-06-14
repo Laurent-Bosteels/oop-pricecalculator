@@ -18,4 +18,5 @@ Anything complex should be calculated in the model -->
     </form>
 
 </section>
+
 <?php require 'includes/footer.php'?>

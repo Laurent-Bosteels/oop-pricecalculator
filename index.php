@@ -14,7 +14,6 @@ require 'Model/User.php';
 require 'Model/Product.php';
 
 //Loader models
-require 'Model/ProductLoader.php';
 
 //include all your controllers here
 require 'Controller/HomepageController.php';
