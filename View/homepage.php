@@ -2,10 +2,20 @@
 <!-- this is the view, try to put only simple if's and loops here.
 Anything complex should be calculated in the model -->
 <section>
-    <h4>Hello <?php echo $user->getName()?>,</h4>
 
-    <p><a href="index.php?page=info">To info page</a></p>
+    <form method="post" action="">
+        <label for="product">Choose a product:</label>
+            <select name="product" id="product">
+                <option value="">Select Product</option>
+            </select>
 
-    <p>Put your content here.</p>
+        <label for="customer">Choose a customer:</label>
+            <select name="customer" id="customer">
+                <option value="">Select Customer</option>
+            </select>
+
+        <button type="submit" name="submit">submit</button>
+    </form>
+
 </section>
 <?php require 'includes/footer.php'?>
