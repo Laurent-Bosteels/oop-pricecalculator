@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-class Connection
+class Database
 
 {
 
-    public function connect(): PDO
+    public static function connect(): PDO
 
     {
 

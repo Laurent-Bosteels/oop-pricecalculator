@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
 
-class Product
+class Product // inmutable
 
 {
-    private int $id;
-    private string $name;
-    private float $price;
+    protected int $id;
+    protected string $name;
+    protected float $price;
 
     public function __construct(int $id, string $name, float $price)
     {
