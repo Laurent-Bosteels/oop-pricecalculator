@@ -1,9 +1,20 @@
 <?php
 declare(strict_types=1);
 
+function whatIsHappening() {
+    echo '<h2>$_GET</h2>';
+    var_dump($_GET);
+    echo '<h2>$_POST</h2>';
+    var_dump($_POST);
+}
+
 //include all your model files here
-require 'Model/Connection.php';
+require 'Model/Database.php';
+require 'Model/User.php';
 require 'Model/Product.php';
+
+//Loader models
+require 'Model/ProductLoader.php';
 
 //include all your controllers here
 require 'Controller/HomepageController.php';
