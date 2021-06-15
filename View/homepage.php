@@ -7,6 +7,16 @@ Anything complex should be calculated in the model -->
         <label for="product">Choose a product:</label>
             <select name="product" id="product">
                 <option value="">Select Product</option>
+                <?php
+                /** @var Product[] $products trick by Koen */
+                $products = $products->getAllProducts();
+                foreach ($products as $product) {
+                    $id = $product->getId();
+                    $name = ucfirst($product->getName());
+                    $price = number_format($product->getPrice() / 100, 2) ;
+                    echo "<option value='{$id}'>{$name}={$price} &euro;</option>";
+                }
+                ?>
             </select>
 
         <label for="customer">Choose a customer:</label>
