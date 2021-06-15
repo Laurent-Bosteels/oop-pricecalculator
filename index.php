@@ -12,6 +12,7 @@ function whatIsHappening() {
 require 'Model/Database.php';
 require 'Model/User.php';
 require 'Model/Product.php';
+require 'Model/ProductLoader.php';
 
 //Loader models
 
