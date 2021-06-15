@@ -14,6 +14,16 @@ Anything complex should be calculated in the model -->
         <label for="customer">Choose a customer:</label>
             <select name="customer" id="customer">
                 <option value="">Select Customer</option>
+                <?php
+                /** @var Customer[] $customers trick by Koen */
+                $customers = $customers->getCustomers();
+                foreach ($customers as $customer) {
+                    $id = $customer->getId();
+                    $firstname = $customer->getFirstname();
+                    $lastname =$customer->getLastname() ;
+                    echo "<option value='{$id}'>{$firstname}{$lastname}</option>";
+                }
+                ?>
             </select>
 
         <button type="submit" name="submit">submit</button>
