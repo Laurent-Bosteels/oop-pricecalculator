@@ -17,6 +17,14 @@ Anything complex should be calculated in the model -->
                 echo '<option value="'.$customer->getId().'">'.$customer->getFirstName().' '.$customer->getLastName().'</option>';}
             ?>
             </select>
+
+            <label for="discount">Choose a discount group:</label>
+            <select name="discount" id="discount">
+            <?php foreach ($allCustomerGroups as $group) {
+                echo '<option value="'.$group->getId().'">'.$group->getName().' '.$group->getFixedDiscount().' '.$group->getVariableDiscount().'</option>';}
+            ?>
+            </select>
+
         <button type="submit" name="submit">submit</button>
     </form>
 

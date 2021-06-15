@@ -15,12 +15,10 @@ class CustomerLoader extends Database
         foreach ($selectedCustomers as $product) {
             $this->customers[] = new Customer((int)$product['id'], $product['firstname'], $product['lastname'], (int)$product['group_id'], (int)$product['fixed_discount'], (int)$product['variable_discount']);
         }
-
     }
 
     public function getAllCustomers(): array
     {
         return $this->customers;
     }
-
 }

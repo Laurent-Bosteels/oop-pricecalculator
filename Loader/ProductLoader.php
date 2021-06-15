@@ -6,7 +6,7 @@ class ProductLoader extends Database
     private array $products;
 
     public function __construct()
-    
+
     {
         $con = Database::connect();
         $handle = $con->prepare('SELECT * FROM product');
@@ -16,12 +16,10 @@ class ProductLoader extends Database
         foreach ($selectedProducts as $product) {
             $this->products[] = new Product((int)$product['id'], $product['name'], (int)$product['price']);
         }
-
     }
 
     public function getAllProducts(): array
     {
         return $this->products;
     }
-
 }

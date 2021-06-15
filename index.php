@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+// ERROR HANDLING
+ini_set('display_errors', "1");
+ini_set('display_startup_errors', "1");
+error_reporting(E_ALL);
+
 function whatIsHappening() {
     echo '<h2>$_GET</h2>';
     var_dump($_GET);
@@ -13,10 +18,12 @@ require 'Model/Database.php';
 require 'Model/User.php';
 require 'Model/Product.php';
 require 'Model/Customer.php';
+require 'Model/CustomerGroup.php';
 
-//Loader models\
+//Loader models
 require 'Loader/ProductLoader.php';
 require 'Loader/CustomerLoader.php';
+require 'Loader/CustomerGroupLoader.php';
 
 //include all your controllers here
 require 'Controller/HomepageController.php';
