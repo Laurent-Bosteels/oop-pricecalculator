@@ -8,8 +8,14 @@ class HomepageController
 
     {
         //this is just example code, you can remove the line below
+
+        // GETTING ALL THE PRODUCTS 
         $loader = new ProductLoader();
         $products = $loader->getAllProducts();
+
+         // GETTING ALL THE CUSTOMERS (NEEDS A NEW LOADER VARIABLE)
+        $loaderCustomer = new CustomerLoader();
+        $customers = $loaderCustomer->getAllCustomers();
 
         // NO ECHOING IN THE CONTROLLER! ONLY DECLARE THE VARIABLES
         // VIEW WILL DISPLAY THE DATA

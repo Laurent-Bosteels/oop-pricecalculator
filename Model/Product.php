@@ -7,13 +7,14 @@ class Product // inmutable
     protected int $id;
     protected string $name;
     protected float $price;
+    private const DIVIDER = 100;
 
     public function __construct(int $id, string $name, float $price)
     {
         $this->id = $id;
         $this->name = $name;
-        $this->price = $price;
-
+        $this->price = $price / self::DIVIDER;
+        
     }
 
     public function getId():int

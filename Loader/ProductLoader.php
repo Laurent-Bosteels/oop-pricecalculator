@@ -1,11 +1,12 @@
 <?php
 
-class ProductLoader
+class ProductLoader extends Database
 
 {
     private array $products;
 
     public function __construct()
+    
     {
         $con = Database::connect();
         $handle = $con->prepare('SELECT * FROM product');

@@ -7,15 +7,16 @@ Anything complex should be calculated in the model -->
         <label for="product">Choose a product:</label>
             <select name="product" id="product">
             <?php foreach ($products as $product) {
-                echo '<option value="'.$product->getId().'">'.$product->getName().'</option>';}
+                echo '<option value="'.$product->getId().'">'.$product->getName().' '.$product->getPrice().' cents'.'</option>';}
             ?>
             </select>
 
         <label for="customer">Choose a customer:</label>
             <select name="customer" id="customer">
-                <option value="">Select Customer</option>
+            <?php foreach ($customers as $customer) {
+                echo '<option value="'.$customer->getId().'">'.$customer->getFirstName().' '.$customer->getLastName().'</option>';}
+            ?>
             </select>
-
         <button type="submit" name="submit">submit</button>
     </form>
 

@@ -12,9 +12,11 @@ function whatIsHappening() {
 require 'Model/Database.php';
 require 'Model/User.php';
 require 'Model/Product.php';
-require 'Model/ProductLoader.php';
+require 'Model/Customer.php';
 
-//Loader models
+//Loader models\
+require 'Loader/ProductLoader.php';
+require 'Loader/CustomerLoader.php';
 
 //include all your controllers here
 require 'Controller/HomepageController.php';
