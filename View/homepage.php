@@ -25,7 +25,8 @@ Anything complex should be calculated in the model -->
             ?>
             </select>
 
-        <button type="submit" name="submit">submit</button>
+        <input id="submit" type="submit" name="calculate" value="Calculate the price"/>
+        
     </form>
 
 </section>
