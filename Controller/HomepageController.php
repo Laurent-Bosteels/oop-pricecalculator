@@ -21,6 +21,17 @@ class HomepageController
         $loaderCustomerGroup = new CustomerGroupLoader();
         $allCustomerGroups = $loaderCustomerGroup->getAllCustomerGroups();
 
+        if (isset($_POST['submit'])){
+            $productsSelected = $loader->getProductById((int)$_POST['product']);
+            var_dump($productsSelected);
+        }
+
+        if (isset($_POST['submit'])){
+            $customerSelected = $loaderCustomer->getCustomerById((int)$_POST['customer']);
+            var_dump($customerSelected);
+        }
+
+
         // NO ECHOING IN THE CONTROLLER! ONLY DECLARE THE VARIABLES
         // VIEW WILL DISPLAY THE DATA
 
