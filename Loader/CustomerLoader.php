@@ -22,4 +22,12 @@ class CustomerLoader extends Database
     {
         return $this->customers;
     }
+    public function getCustomerById(int $id): Customer
+    {
+        foreach ($this->getAllCustomers() as $customer) {
+            if ($id === $customer->getId()) {
+                return $customer;
+            }
+        }
+    }
 }
