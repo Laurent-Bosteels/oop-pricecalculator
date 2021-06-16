@@ -1,8 +1,8 @@
 
 <?php
 
-
 class CustomerLoader
+
 {
     private array $customers;
 
@@ -16,7 +16,6 @@ class CustomerLoader
         foreach ($selectedCustomers as $customer) {
             $this->customers[] = new Customer((int)$customer['id'], $customer['firstname'], $customer['lastname'], (int)$customer['group_id'], (int)$customer['fixed_discount'], (int)$customer['variable_discount']);
         }
-
     }
 
     public function getAllCustomers(): array
@@ -32,5 +31,4 @@ class CustomerLoader
             }
         }
     }
-
 }
