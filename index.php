@@ -13,6 +13,8 @@ function whatIsHappening() {
     var_dump($_POST);
 }
 
+whatIsHappening();
+
 //include all your model files here
 require 'Model/Database.php';
 require 'Model/User.php';

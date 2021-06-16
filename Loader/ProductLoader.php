@@ -32,4 +32,5 @@ class ProductLoader extends Database
             }
         }
     }
+    
 }
