@@ -28,8 +28,6 @@ class HomepageController
             var_dump($productsSelected, $customerSelected, $customerGroupSelected);
         }
 
-
-
         // NO ECHOING IN THE CONTROLLER! ONLY DECLARE THE VARIABLES
         // VIEW WILL DISPLAY THE DATA
 

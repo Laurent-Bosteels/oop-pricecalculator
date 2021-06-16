@@ -1,8 +1,8 @@
+
 <?php
-declare(strict_types=1);
 
-class CustomerLoader extends Database
 
+class CustomerLoader
 {
     private array $customers;
 
@@ -13,9 +13,10 @@ class CustomerLoader extends Database
         $handle->execute();
         $selectedCustomers = $handle->fetchAll();
 
-        foreach ($selectedCustomers as $product) {
-            $this->customers[] = new Customer((int)$product['id'], $product['firstname'], $product['lastname'], (int)$product['group_id'], (int)$product['fixed_discount'], (int)$product['variable_discount']);
+        foreach ($selectedCustomers as $customer) {
+            $this->customers[] = new Customer((int)$customer['id'], $customer['firstname'], $customer['lastname'], (int)$customer['group_id'], (int)$customer['fixed_discount'], (int)$customer['variable_discount']);
         }
+
     }
 
     public function getAllCustomers(): array
@@ -23,10 +24,10 @@ class CustomerLoader extends Database
         return $this->customers;
     }
 
-    public function getCustomerById(int $id): Customer
+    public function getCustomerById(int $id)
     {
-        foreach ($this->getAllCustomers() as $customer) {
-            if ($id === $customer->getId()) {
+        foreach ($this->customers as $customer) {
+            if ($customer->getId() === $id) {
                 return $customer;
             }
         }
