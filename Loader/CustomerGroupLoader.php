@@ -21,4 +21,14 @@ class CustomerGroupLoader extends Database
     {
         return $this->customerGroups;
     }
+
+    public function getCustomerGroupById(int $id): CustomerGroup
+    {
+        foreach ($this->getAllCustomerGroups() as $group) {
+            if ($id === $group->getId()) {
+                return $group;
+            }
+        }
+    }
+
 }

@@ -23,13 +23,11 @@ class HomepageController
 
         if (isset($_POST['submit'])){
             $productsSelected = $loader->getProductById((int)$_POST['product']);
-            var_dump($productsSelected);
+            $customerSelected = $loaderCustomer->getCustomerById((int)$_POST['customer']);
+            $customerGroupSelected = $loaderCustomerGroup->getCustomerGroupById((int)$_POST['discount']);
+            var_dump($productsSelected, $customerSelected, $customerGroupSelected);
         }
 
-        if (isset($_POST['submit'])){
-            $customerSelected = $loaderCustomer->getCustomerById((int)$_POST['customer']);
-            var_dump($customerSelected);
-        }
 
 
         // NO ECHOING IN THE CONTROLLER! ONLY DECLARE THE VARIABLES
