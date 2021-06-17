@@ -27,10 +27,19 @@ Anything complex should be calculated in the model -->
 
 </section>
 
+            <?php 
+        echo $selectFinalPrice;
+        echo '<br>';
+        echo $selectIdCostumer;
+        echo '<br>';
+        echo $selectCustomerFixed;
+        echo '<br>';
+        echo $selectBestVarDisc;
+
+        ?>
+        
 <section>
-    <?php
-    echo $calculate->getFinalPrice();
-    ?>
+
 </section>
 
 <?php require 'includes/footer.php' ?>
