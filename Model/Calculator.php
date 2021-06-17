@@ -108,7 +108,7 @@ class Calculator
         if($this->finalPrice < 0) {
             $this->finalPrice = 0;
         }
-        
+
     }
 
     // GETTERS

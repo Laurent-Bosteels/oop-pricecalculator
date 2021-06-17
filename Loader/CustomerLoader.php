@@ -23,7 +23,7 @@ class CustomerLoader
         return $this->customers;
     }
 
-    public function getCustomerById(int $id)
+    public function getCustomerById(int $id): Customer
     {
         foreach ($this->customers as $customer) {
             if ($customer->getId() === $id) {

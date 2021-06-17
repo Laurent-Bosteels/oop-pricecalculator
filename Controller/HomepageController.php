@@ -22,14 +22,22 @@ class HomepageController
         $loaderCustomerGroup = new CustomerGroupLoader();
         $allCustomerGroups = $loaderCustomerGroup->getAllCustomerGroups();
 
-        $selectFinalPrice = "";
-        $selectIdCostumer = "";
-        $selectCustomerFixed= "";
-        $selectBestVarDisc = "";
-        
+        $selectFinalPrice = "0";
+        $selectIdCostumer = "0";
+        $selectCustomerFixed= "0";
+        $selectBestVarDisc = "0";
+        $customerName = "...";
+        $productName = "Select a product";
 
         if (isset($_POST['customer'])&&isset($_POST['product'])) {
 
+            $customer = $loaderCustomer->getCustomerById((int)$_POST["customer"]);
+            $customerName = $customer->getFullName();
+
+            $product = $loader->getProductById((int)$_POST["product"]);
+            $productName = $product->getName();
+
+        
             $calculate = new Calculator((int)$_POST["customer"], (int)$_POST["product"]);
             $calculate->calculatorFunc();
             $selectFinalPrice = $calculate->getFinalPrice();

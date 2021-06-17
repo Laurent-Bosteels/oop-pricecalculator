@@ -37,9 +37,9 @@ class Customer
         return $this->lastName;
     }
 
-    public function fullName(): string
+    public function getFullName(): string
     {
-        return $this->firstName . ' ' . $this->lastName;
+        return $this->firstName. ' ' . $this->lastName;
     }
 
     public function getGroupId(): int
