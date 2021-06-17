@@ -1,3 +1,5 @@
+![screenshot](https://github.com/Laurent-Bosteels/oop-pricecalculator/blob/main/img/screenshot.png?raw=true)
+
 ## Description
 Contributors are Valentina Corak & Laurent Bosteels
 Exercise on PHP/OOP/MVC
