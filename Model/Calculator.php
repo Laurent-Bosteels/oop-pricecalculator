@@ -20,7 +20,7 @@ class Calculator
     private int $sumFixedGroupDisc;
     private array $groupVariable;
     private array $groupFixed;
-    private int $maxGroupDisc;
+    private int $maxVarGroupDisc;
     private string $bestGroupDisc;
 
     public function __construct(int $idCustomer, int $idProduct)
@@ -81,7 +81,6 @@ class Calculator
 
         if (isset($this->idProduct)) {
             $product = $loader->getProductById((int)$_POST["product"]);
-
             $this->price = $product->getPrice();
         }
     }
@@ -102,6 +101,14 @@ class Calculator
 
         $this->finalPrice = (($this->price - ($this->customerFixed * 100) - ($this->sumFixedGroupDisc * 100)) *  (1 - $this->bestVarDisc / 100)) / 100;
         $this->finalPrice = round($this->finalPrice, 2);
+
+        // THE PRICE CAN NEVER BE NEGATIVE
+        // IF FINALPRICE IS SMALLER THAN 0 WE SET IT TO ZERO.
+
+        if($this->finalPrice < 0) {
+            $this->finalPrice = 0;
+        }
+        
     }
 
     // GETTERS

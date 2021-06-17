@@ -2,7 +2,9 @@
 declare(strict_types=1);
 
 class HomepageController
+
 {
+
     // RENDER FUNCTION / both $_GET and $_POST variables available (if needed)
     public function render(array $GET, array $POST)
 
@@ -21,7 +23,7 @@ class HomepageController
         $loaderCustomerGroup = new CustomerGroupLoader();
         $allCustomerGroups = $loaderCustomerGroup->getAllCustomerGroups();
 
-        if (isset($_POST['submit'])){
+        if (isset($_POST['submit'])) {
 
             $calculate = new Calculator((int)$_POST["customer"], (int)$_POST["product"]);
             $calculate->calculatorFunc();
