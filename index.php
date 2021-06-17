@@ -13,8 +13,6 @@ function whatIsHappening() {
     var_dump($_POST);
 }
 
-whatIsHappening();
-
 //include all your model files here
 require 'Model/Database.php';
 require 'Model/User.php';
@@ -22,7 +20,6 @@ require 'Model/Product.php';
 require 'Model/Customer.php';
 require 'Model/CustomerGroup.php';
 require 'Model/Calculator.php';
-
 
 //Loader models
 require 'Loader/ProductLoader.php';

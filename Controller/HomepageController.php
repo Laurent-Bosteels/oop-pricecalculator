@@ -22,10 +22,10 @@ class HomepageController
         $allCustomerGroups = $loaderCustomerGroup->getAllCustomerGroups();
 
         if (isset($_POST['submit'])){
-            $productsSelected = $loader->getProductById((int)$_POST['product']);
-            $customerSelected = $loaderCustomer->getCustomerById((int)$_POST['customer']);
-            $customerGroupSelected = $loaderCustomerGroup->getCustomerGroupById((int)$_POST['discount']);
-            var_dump($productsSelected, $customerSelected, $customerGroupSelected);
+
+            $calculate = new Calculator((int)$_POST["customer"], (int)$_POST["product"]);
+            $calculate->calculatorFunc();
+            
         }
 
         // NO ECHOING IN THE CONTROLLER! ONLY DECLARE THE VARIABLES
