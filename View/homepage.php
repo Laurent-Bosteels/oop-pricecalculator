@@ -8,7 +8,7 @@ Anything complex should be calculated in the model -->
 
         <select name="product" id="product">
             <?php foreach ($products as $product) {
-                echo '<option value="' . $product->getId() . '">' . $product->getName() . ' ' . $product->getPrice() . ' cents' . '</option>';
+                echo '<option value="' . $product->getId() . '">' . $product->getName() . ' - ' . $product->getPrice()/100 . ' cents' . '</option>';
             }
             ?>
         </select>

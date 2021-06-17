@@ -9,7 +9,6 @@ class HomepageController
     public function render(array $GET, array $POST)
 
     {
-        //this is just example code, you can remove the line below
 
         // GETTING ALL THE PRODUCTS 
         $loader = new ProductLoader();
