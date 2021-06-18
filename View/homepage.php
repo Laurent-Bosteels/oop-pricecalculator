@@ -50,7 +50,6 @@ Anything complex should be calculated in the model -->
         </div>
     </div>
 </section>
-
 <!-- cards  -->
 
 <section class="section">
@@ -108,6 +107,5 @@ Anything complex should be calculated in the model -->
         </div>
     </div>
 </section>
-<section>
 
     <?php require 'includes/footer.php' ?>

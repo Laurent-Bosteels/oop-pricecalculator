@@ -33,6 +33,7 @@ class Calculator
 
     public function getDisc()
     {
+        // Checking if the customer ID is set
         if (isset($this->idCustomer)) {
 
             // LOADING CUSTOMER DATA
@@ -59,6 +60,9 @@ class Calculator
             // PARENT ID!!! 
             $parentID = $group->getParentId();
 
+            // Parent ID's start from 1
+            // So if the the parent ID is bigger 0, we check if it has a fixed and variable discount
+            // From the top: check if user ID is set, does it have a parent ID, if so what is the ID & is it bigger than 0, if so does it have a fixed or variable discount
             while ($parentID > 0) {
                 $group = $loaderCustomerGroup->getCustomerGroupById((int)$parentID);
                 $fixed = $group->getFixedDiscount();
@@ -92,6 +96,7 @@ class Calculator
 
         // max — returns the highest value highest value
         $this->maxVarGroupDisc = max($this->groupVariable);
+        // array_sum will calculate the addition of all discounts pushed to the array
         $this->sumFixedGroupDisc = array_sum($this->groupFixed);
 
         // if the max group discount is bigger than variable discount return the group discount, else return customer variable discount
