@@ -90,16 +90,21 @@ class Calculator
         $this->getDisc();
         $this->getPrice();
 
+        // max — returns the highest value highest value
         $this->maxVarGroupDisc = max($this->groupVariable);
         $this->sumFixedGroupDisc = array_sum($this->groupFixed);
 
+        // if the max group discount is bigger than variable discount return the group discount, else return customer variable discount
         if ($this->maxVarGroupDisc > $this->customerVariable) {
             $this->bestVarDisc = $this->maxVarGroupDisc;
         } else {
             $this->bestVarDisc = $this->customerVariable;
         }
-
+        
+        // final price calculation
         $this->finalPrice = (($this->price - ($this->customerFixed * 100) - ($this->sumFixedGroupDisc * 100)) *  (1 - $this->bestVarDisc / 100)) / 100;
+        
+        // round -> returns a float, 2 (= precision), returns 2 digits after the comma
         $this->finalPrice = round($this->finalPrice, 2);
 
         // THE PRICE CAN NEVER BE NEGATIVE

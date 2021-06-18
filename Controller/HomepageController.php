@@ -22,6 +22,7 @@ class HomepageController
         $loaderCustomerGroup = new CustomerGroupLoader();
         $allCustomerGroups = $loaderCustomerGroup->getAllCustomerGroups();
 
+        // SETTING DEFAULT VALUES IN ORDER TO AVOID ERRORS WHEN LOADING THE PAGE
         $selectFinalPrice = "0";
         $selectIdCostumer = "0";
         $selectCustomerFixed= "0";
@@ -29,6 +30,7 @@ class HomepageController
         $customerName = "...";
         $productName = "Select a product";
 
+        
         if (isset($_POST['customer'])&&isset($_POST['product'])) {
 
             $customer = $loaderCustomer->getCustomerById((int)$_POST["customer"]);
