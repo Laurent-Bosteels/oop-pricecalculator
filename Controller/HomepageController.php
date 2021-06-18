@@ -34,8 +34,7 @@ class HomepageController
 
             $product = $loader->getProductById((int)$_POST["product"]);
             $productName = $product->getName();
-
-        
+            
             $calculate = new Calculator((int)$_POST["customer"], (int)$_POST["product"]);
             $calculate->calculatorFunc();
             $selectFinalPrice = $calculate->getFinalPrice();
