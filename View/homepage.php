@@ -17,7 +17,7 @@ Anything complex should be calculated in the model -->
                             <div class="select is-dark">
                                 <select class="select" name="product" id="product">
                                     <?php foreach ($products as $product) {
-                                        echo '<option value="' . $product->getId() . '">' . $product->getName() . ' - ' . $product->getPrice() / 100 . ' cents' . '</option>';
+                                        echo '<option value="' . $product->getId() . '">' . $product->getName() . ' - ' . $product->getPrice() / 100 . ' €' . '</option>';
                                     }
                                     ?>
                                 </select>
@@ -59,7 +59,7 @@ Anything complex should be calculated in the model -->
         <div class="columns mt-8 is-8 is-multiline is-centered">
             <div class="column is-6-tablet is-3-desktop">
                 <div class="card">
-                    <div class="card-image has-text-centered px-6">
+                    <div class="card-image has-text-centered pt-3 px-6">
                         <img src="https://image.flaticon.com/icons/png/512/1524/1524711.png" alt="product">
                     </div>
                     <div class="card-content has-text-centered">
@@ -71,11 +71,11 @@ Anything complex should be calculated in the model -->
 
             <div class="column is-6-tablet is-3-desktop">
                 <div class="card">
-                    <div class="card-image has-text-centered px-6">
+                    <div class="card-image has-text-centered pt-3 px-6">
                         <img src="https://image.flaticon.com/icons/png/512/4866/4866004.png" alt="product">
                     </div>
                     <div class="card-content has-text-centered">
-                        <p><?php echo $selectCustomerFixed; ?> cents</p>
+                        <p><?php echo $selectCustomerFixed; ?> €</p>
                         <p class="title is-size-5">Fixed Discount</p>
                     </div>
                 </div>
@@ -83,7 +83,7 @@ Anything complex should be calculated in the model -->
 
             <div class="column is-6-tablet is-3-desktop">
                 <div class="card">
-                    <div class="card-image has-text-centered px-6">
+                    <div class="card-image has-text-centered pt-3 px-6">
                         <img src="https://image.flaticon.com/icons/png/512/3126/3126544.png" alt="product">
                     </div>
                     <div class="card-content has-text-centered">
@@ -95,11 +95,11 @@ Anything complex should be calculated in the model -->
 
             <div class="column is-6-tablet is-3-desktop">
                 <div class="card">
-                    <div class="card-image has-text-centered px-6">
+                    <div class="card-image has-text-centered pt-3 px-6">
                         <img src="https://image.flaticon.com/icons/png/512/1/1437.png" alt="product">
                     </div>
                     <div class="card-content has-text-centered">
-                        <p><?php echo $selectFinalPrice; ?> cents</p>
+                        <p><?php echo $selectFinalPrice; ?> €</p>
                         <p class="title is-size-5">Final Price</p>
                     </div>
                 </div>
