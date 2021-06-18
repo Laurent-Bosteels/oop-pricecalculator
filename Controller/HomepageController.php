@@ -18,10 +18,6 @@ class HomepageController
         $loaderCustomer = new CustomerLoader();
         $customers = $loaderCustomer->getAllCustomers();
 
-         // GETTING ALL THE CUSTOMER GROUPS (NEEDS A NEW LOADER VARIABLE)
-        $loaderCustomerGroup = new CustomerGroupLoader();
-        $allCustomerGroups = $loaderCustomerGroup->getAllCustomerGroups();
-
         // SETTING DEFAULT VALUES IN ORDER TO AVOID ERRORS WHEN LOADING THE PAGE
         $selectFinalPrice = "0";
         $selectIdCostumer = "0";
